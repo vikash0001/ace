@@ -135,7 +135,7 @@ nav
 .terms-and-conditions
 {
     position: relative;
-    top: -27px;
+    top: -30px;
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
@@ -666,6 +666,10 @@ left:0px;
     line-height: 1.5;
     text-align: center;
 }
+#story-latest-news .story_cover
+{
+    margin-top: 60px;
+}
 #story-latest-news .content-row
 {
     width: 100%;
@@ -892,9 +896,10 @@ left:0px;
     }
     .navlinks{
         position:absolute;
+        left: 0;
         top:105px;
+        width: 100%;
         /* background-color: white; */
-        width: 100vw;
         padding: 0px 25px;
         z-index:0;
         border-top: solid rgb(3, 3, 130) 2px;
