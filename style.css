@@ -25,6 +25,7 @@
     background-color: rgb(15, 76, 117);
     cursor: pointer;
     text-decoration: none;
+    display: none;
 }
 #row1
 {   width: 100%;
@@ -125,7 +126,7 @@ nav
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: 600;
-    margin: 10px 5px;
+    margin: 10px 10px;
     color: rgb(48, 48, 48);
 }
 .navlinks li a span{

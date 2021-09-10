@@ -44,16 +44,19 @@
                                             <a href="https://carpetace.com.au/faq/">FAQ</a>
                                         </li>
                                         <li>
-                                            <a href="https://carpetace.com.au/locations-category/east-melbourne/">Locations</a>
+                                            <a
+                                                href="https://carpetace.com.au/locations-category/east-melbourne/">Locations</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">flooring storespa <span>▼</span></a>
+                                <li><a href="#">flooring store<span>▼</span></a>
                                     <ul class="sub-menu">
                                         <li><a href="https://carpetace.com.au/carpet-flooring-store/">Carpet</a></li>
-                                        <li><a href="https://carpetace.com.au/carpet-tiles-flooring-store/">Carpet Tiles</a></li>
+                                        <li><a href="https://carpetace.com.au/carpet-tiles-flooring-store/">Carpet
+                                                Tiles</a></li>
                                         <li><a href="https://carpetace.com.au/timber-flooring-store/">Timber</a></li>
-                                        <li><a href="https://carpetace.com.au/vinyl-hybrid-planks-flooring-store/">Vinyl &amp; Hybrid Planks</a></li>
+                                        <li><a href="https://carpetace.com.au/vinyl-hybrid-planks-flooring-store/">Vinyl
+                                                &amp; Hybrid Planks</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">services <span>▼</span></a>
@@ -1298,11 +1301,15 @@
     </script>
     <script>
         var navbar = document.querySelector('.navbar-wrapper');
+        var scroll_to_top_btn = document.querySelector(".scroll-to-top-btn a")
         window.addEventListener('scroll', () => {
             if (scrollY >= 180) {
                 navbar.classList.add('navbar-active');
+                scroll_to_top_btn.style.display = "block"
             }
-            else { navbar.classList.remove('navbar-active') }
+            else { navbar.classList.remove('navbar-active');
+            scroll_to_top_btn.style.display = "none"
+         }
         });
 
     </script>
