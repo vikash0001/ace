@@ -364,9 +364,9 @@
                                 Tony was great to deal with. Would recommend.
                             </p>
                         </div>
-                        <!-- <div class="read-more">
+                        <div class="review-read-more" style="opacity: 0;">
                             Read more
-                        </div> -->
+                        </div>
 
                         <div class="card-google-link">
                             <a href="#">
@@ -1021,6 +1021,7 @@
             <div class="scroll-to-top-btn"><a href="#">˄</a>
             </div>
         </main>
+                 <!-- footer -->
         <footer>
             <div class="footer-wrapper">
                 <div class="row1">
@@ -1251,6 +1252,7 @@
         </footer>
 
     </div>
+    <!-- menu-bar-slide -->
     <script>
         var navigation = document.querySelector(".navlinks");
         var burger = document.querySelector(".burger");
@@ -1258,32 +1260,32 @@
             navigation.classList.toggle("active-navlinks")
         });
     </script>
+    <!-- burger-toggler-animation -->
     <script>
-        function toggle() {
-            var list = document.querySelectorAll(".burger-slice")
-            if (list[0].style.rotate == "0deg") {
-                list[0].style.rotate = "50deg"
-                list[0].style.transform = "translateY(8px)"
-                list[1].style.opacity = "0"
-                list[2].style.rotate = "-50deg"
-                list[2].style.transform = "translateY(-8px)"
-                burger.style.transform = 'translateX(7px)'
-            }
-            else {
-                list[0].style.rotate = "0deg"
-                list[0].style.transform = "translateY(0px)"
-                list[1].style.opacity = "1"
-                list[2].style.rotate = "0deg"
-                list[2].style.transform = "translateY(0px)"
-                burger.style.transform = 'translateX(0px)'
-
-            }
-
-        }
-        toggle();
-        burger.addEventListener("click", toggle);
+          burger.addEventListener("click",() => {
+              if(burger.classList.contains('burger-active'))
+              burger.classList.remove('burger-active');
+              else{
+                burger.classList.add('burger-active');
+              }
+          });
+            
     </script>
-
+    <!-- onscroll-navbar-animation -->
+    <script>
+        var navbar = document.querySelector('.navbar-wrapper');
+        var scroll_to_top_btn = document.querySelector(".scroll-to-top-btn a")
+        window.addEventListener('scroll', () => {
+            if (scrollY >= 180) {
+                navbar.classList.add('navbar-active');
+                scroll_to_top_btn.style.display = "block"
+            }
+            else { navbar.classList.remove('navbar-active');
+            scroll_to_top_btn.style.display = "none"
+         }
+        });
+    </script>
+    <!-- footer-service-area-list-slidebar -->
     <script>
         var area1 = document.querySelector(".our-service-area");
         function footer() {
@@ -1299,19 +1301,24 @@
         footer()
         area1.addEventListener('click', footer)
     </script>
+    <!-- review-card-read-more -->
     <script>
-        var navbar = document.querySelector('.navbar-wrapper');
-        var scroll_to_top_btn = document.querySelector(".scroll-to-top-btn a")
-        window.addEventListener('scroll', () => {
-            if (scrollY >= 180) {
-                navbar.classList.add('navbar-active');
-                scroll_to_top_btn.style.display = "block"
-            }
-            else { navbar.classList.remove('navbar-active');
-            scroll_to_top_btn.style.display = "none"
-         }
+        var review_read_more_btn = document.querySelectorAll('.review-read-more');
+        var review_card_text = document.querySelectorAll('.review-card-text');
+        review_read_more_btn.forEach((item ,index )=> {
+           item.addEventListener('click',() =>{
+               if(review_card_text[index].classList.contains('review-card-text-active')){
+                review_card_text[index].classList.remove('review-card-text-active')
+                review_read_more_btn[index].innerHTML = 'Read more'
+               }
+               else{
+                review_card_text[index].classList.add('review-card-text-active')
+                review_read_more_btn[index].innerHTML = 'See less'
+               }
+             
+           });
         });
-
+    
     </script>
 </body>
 

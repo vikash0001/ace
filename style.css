@@ -82,9 +82,25 @@
     height: 4px;
     margin: 4px;
     background-color: rgb(199, 199, 199);
-    transform-origin: 14px;
-    transition: rotate 0.2s;
-    border-radius: 5px;
+    transform-origin:left;
+    transition:  cubic-bezier(.59,.59,.85,1.47) 0.30s;
+    border-radius: 3px;
+}
+.burger-active
+{
+    transition-timing-function: ease-in-out;
+}
+.burger-active .burger-slice:nth-child(1)
+{
+    transform:translateY(-4px) rotateZ(45deg);
+}
+.burger-active .burger-slice:nth-child(2)
+{
+    opacity: 0;
+}
+.burger-active .burger-slice:nth-child(3)
+{
+    transform:translateY(5px) rotateZ(-45deg);
 }
 nav
 {    width: 100%;
@@ -401,11 +417,9 @@ grid-row-end:25;
     height:63px;
     overflow: hidden;
 }
-.read-more
+.review-card-text-active
 {
-    color: grey;
-    cursor: pointer;
-    margin-bottom: 15px;
+    height: auto;
 }
 .review-read-more
 {
